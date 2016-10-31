@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/actionbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/action_bar_height">
+
+    <RelativeLayout
+        android:id="@+id/actionbar_contents"
+        style="@style/ActionBar.Bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:clickable="true"
+        android:soundEffectsEnabled="false">
+
+        <TextView
+            android:id="@+id/logotype"
+            style="@style/ActionBar.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/action_bar_logo_width"
+            android:gravity="center_vertical"
+            android:paddingLeft="2dp"
+            android:text="@string/AppName" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/debug"
+                style="@style/ActionBar.Icon"
+                android:contentDescription="debug mode"
+                android:onClick="clickDebug"
+                android:src="@drawable/doodlebug"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/undo"
+                style="@style/ActionBar.Icon"
+                android:contentDescription="undo"
+                android:onClick="clickUndo"
+                android:src="@drawable/undo" />
+
+            <ImageButton
+                android:id="@+id/load"
+                style="@style/ActionBar.Icon"
+                android:contentDescription="load image"
+                android:onClick="clickLoad"
+                android:src="@drawable/load"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/clear"
+                style="@style/ActionBar.Icon"
+                android:contentDescription="erase drawing"
+                android:onClick="clickClear"
+                android:src="@drawable/scribble" />
+
+            <ImageButton
+                android:id="@+id/save"
+                style="@style/ActionBar.Icon"
+                android:contentDescription="save drawing"
+                android:onClick="clickSave"
+                android:src="@drawable/check" />
+
+            <ImageButton
+                android:id="@+id/share"
+                style="@style/ActionBar.Icon"
+                android:contentDescription="share drawing"
+                android:onClick="clickShare"
+                android:src="@drawable/share"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
